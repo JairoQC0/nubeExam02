@@ -13,7 +13,7 @@ function verificarToken(req, res, next) {
       return res.status(403).json({ error: 'Token inválido o expirado' });
     }
 
-    req.usuario = usuario; // Ahora puedes acceder a req.usuario.id
+    req.usuario = usuario;
     next();
   });
 }
